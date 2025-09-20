@@ -1,32 +1,12 @@
-{
-  "name": "web-telegram-app",
-  "private": true,
-  "version": "1.0.0",
-  "main": "bot.js",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "start": "node bot.js",
-    "start:bot": "node bot.js"
-  },
-  "dependencies": {
-    "@dataconnect/generated": "file:src/dataconnect-generated",
-    "node-fetch": "^3.3.2",
-    "node-telegram-bot-api": "^0.66.0",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.33.0",
-    "@types/react": "^19.1.10",
-    "@types/react-dom": "^19.1.7",
-    "@vitejs/plugin-react": "^5.0.0",
-    "eslint": "^9.33.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-    "globals": "^16.3.0",
-    "vite": "^7.1.2"
-  }
-}
+const express = require("express");
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get("/", (req, res) => {
+  res.send("Bot is running 🚀");
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});

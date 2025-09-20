@@ -1,12 +1,18 @@
-const express = require("express");
-
-const app = express();
-const PORT = process.env.PORT || 4000
-
-app.get("/", (req, res) => {
-  res.send("Bot is running 🚀");
-})
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`)
-})
+{
+  "name": "telegram-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot running on Render",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2",
+    "node-telegram-bot-api": "^0.61.0"
+  },
+  "engines": {
+    "node": ">=18.x"
+  }
+}
